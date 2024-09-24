@@ -1,0 +1,340 @@
+@font-face {
+    font-family: Irish grover;
+    src: url(font/IrishGrover-aJwK.ttf);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.irish-grover {
+    font-family: "Irish Grover";
+    font-style: normal;
+}
+
+.inika {
+    font-family: inika;
+}
+
+body {
+    background-color: #F0F0F0;
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body {
+    --sb-track-color: #F0F0F0;
+    --sb-thumb-color: #acacac;
+    --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 15px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+.main-ui {
+    display: flex;
+    margin: 20px 0 20px 0;
+    justify-content: center;
+
+}
+
+.mn-interface {
+    width: 94%;
+    box-shadow: 14px 16px 24px rgba(0, 0, 0, 0.411);
+    border-radius: 40px;
+}
+
+header {
+    height: 65px;
+    background-color: #7A4D3F;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    position: relative;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.45);
+}
+
+header a {
+    color: white;
+    outline: none;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    right: 32%;
+    top: 22%;
+    margin: 0;
+}
+
+.button_box_header {
+    display: flex;
+    gap: 20px;
+}
+
+.button_box_header button {
+    font-family: irish grover;
+    color: white;
+    background-color: #EA6919;
+    border: none;
+    border-radius: 25px;
+    width: 100px;
+    font-size: 15px;
+    height: 35px;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: .2s all;
+}
+
+.button_box_header button:hover {
+    background-color: #dd5d0e;
+    cursor: pointer;
+}
+
+
+.main_advert {
+    height: 650px;
+    background-image: url(images/background_img.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: inset 0 8px 35px black;
+}
+
+.ds1 {
+    text-align: left;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    text-shadow: 2px 6px 10px black;
+    -webkit-user-select: none;
+    line-height: .79;
+}
+
+.ds2 {
+    display: grid;
+    position: absolute;
+    right: 32%;
+    top: 3%;
+}
+
+.ds2 p {
+    -webkit-user-select: none;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-size: 84px;
+    line-height: 80px;
+    letter-spacing: 1.1px;
+    text-shadow: 2px 4px 25px black;
+    transition: .4s all;
+}
+
+.ds2 span {
+    -webkit-user-select: none;
+    color: white;
+    text-shadow: 2px 4px 15px black;
+    font-size: 30px;
+}
+
+.searchBox {
+    width: 340px;
+    height: 320px;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    border-radius: 40px;
+    background-color: hsla(14, 45%, 26%, 0.829);
+    color: white;
+    line-height: 1;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.searchBox p:nth-child(1) {
+    margin: 6% 0 0 0;
+}
+
+.searchBox p:nth-child(2) {
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.searchBox p:nth-child(4) {
+    margin: 0;
+    text-align: center;
+    color: rgb(180, 174, 174);
+}
+
+.searchBox p span:nth-child(1) {
+    font-size: 40px;
+}
+
+.searchBox p span:nth-child(2) {
+    font-size: 20px;
+}
+
+.searchBox p span:nth-child(3) {
+    font-size: 30px;
+}
+
+.input_bar {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    border-radius: 40px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input_bar div {
+    height: inherit;
+    width: 40px;
+    border-radius: 0 40px 40px 0;
+    background-color: #130C0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all;
+}
+
+.input_bar div:hover {
+    background-color: #000000;
+}
+
+.input_bar div img {
+    padding-top: 3px;
+    width: 15px;
+    opacity: .5;
+    transition: .5s all;
+}
+
+.input_bar div img:hover {
+    opacity: .8;
+}
+
+.searchBox input {
+    resize: none;
+    width: -webkit-fill-available;
+    border-radius: 40px 0 0 40px;
+    padding-left: 10px;
+    background-color: #221714;
+    font-family: inika;
+    text-transform: capitalize;
+    border: none;
+    color: rgb(235, 233, 233);
+    outline: none;
+}
+
+.searchBox input::placeholder {
+    color: rgba(255, 255, 255, 0.301);
+}
+
+.searchBox button {
+    margin-bottom: 40px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-family: irish grover;
+    font-size: 15px;
+    width: 250px;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: hsla(9, 86%, 45%, 0.84);
+    transition: all .4s;
+}
+
+.searchBox button:hover {
+    background-color: hsla(10, 86%, 45%, 100);
+    cursor: pointer;
+}
+
+.nav_box {
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+.nav_box>p {
+    text-align: center;
+    margin: 0px;
+    font-family: inika;
+    font-size: 33px;
+    padding: 40px 0 40px 0;
+}
+
+footer {
+    display: flex;
+    gap: 50px;
+    font-family: roboto;
+    font-size: 12px;
+    padding-left: 20px;
+    background-color: #613b2f;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+
+.box_interactive {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box_interactive div {
+    height: 380px;
+    width: 220px;
+    border-radius: 10px;
+    background-color: #7A4D3F;
+    position: relative;
+}
+
+.box_interactive div img {
+    border-radius: 10px;
+    height: inherit;
+    width: inherit;
+}
+
+.box_interactive div p {
+    position: absolute;
+    text-align: center;
+    font-family: smooch;
+    bottom: -8px;
+    width: inherit;
+    font-size: 32px;
+    margin: 0;
+    text-shadow: 2px 4px 4px black;
+    color: white;
+    transition: all .4s;
+}
+
+.box_interactive div p:hover {
+    font-size: 40px
+}
